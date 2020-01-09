@@ -1,9 +1,9 @@
-## Let's start by loading a view basic Python packages: Numpy, matplotlib_pyplot, Pandas, and seaborn
+##Let's start by loading a view basic Python packages: Numpy, matplotlib_pyplot, Pandas, and seaborn
 import numpy as np
 import matplotlib.pyplot as pp
 import pandas as pd
 import seaborn
-## keep all plots inline.
+##keep all plots inline.
 %matplotlib inline
 ## the Social Security data have been included in a names.zip file that needs to be uncompressed. We can do that with the Python zipfile module.
 import zipfile
