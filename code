@@ -1,28 +1,28 @@
-## Let's start by loading a view basic Python packages: Numpy, matplotlib_pyplot, Pandas, and seaborn
+# Let's start by loading a view basic Python packages: Numpy, matplotlib_pyplot, Pandas, and seaborn
 import numpy as np
 import matplotlib.pyplot as pp
 import pandas as pd
 import seaborn
-##keep all plots inline.
+#keep all plots inline.
 %matplotlib inline
-## the Social Security data have been included in a names.zip file that needs to be uncompressed. We can do that with the Python zipfile module.
+# the Social Security data have been included in a names.zip file that needs to be uncompressed. We can do that with the Python zipfile module.
 import zipfile
 zipfile.ZipFile('names.zip').extractall('.')
-## we will now look at the contents of the directory names. For that, let's load the os module and use the listdir function
+# we will now look at the contents of the directory names. For that, let's load the os module and use the listdir function 
 import os
 os.listdir('names')
 The directory contains multiple files, probably one for each year. Let's have a look at one file, open it in read ('r') mode and look at the very first few lines, let's say the first 10 lines
 open('names/yob2011.txt','r').readlines()[:10]
-## Let's try to read one (2011 file) of these files with Pandas
+# Let's try to read one (2011 file) of these files with Pandas
 names2011 = pd.read_csv('names/yob2011.txt')
 names2011
-## Now let's see the first few rows with a head command
+# Now let's see the first few rows with a head command
 names2011.head()
-## Now let's specify the columns names by adding an argument, so that Sophia is not seen as a column
+# Now let's specify the columns names by adding an argument, so that Sophia is not seen as a column
 names2011 = pd.read_csv('names/yob2011.txt',names=['name','sex','number'])
 names2011
-## Data Wrangling - Collecting different tables
-### Let's now collect all these tables in a names_all list. Then loop over years from 1880 to 2014, so to extend the range to 2014+1.
+# Data Wrangling - Collecting different tables
+# Let's now collect all these tables in a names_all list. Then loop over years from 1880 to 2014, so to extend the range to 2014+1.
 We'll append the list, the result of reading a comma-separated file.We need to assemble the name of each file which we'll do by replacing the number into this generic string. And again, we specify the names of the columns.
 
 names_all = []
@@ -36,8 +36,8 @@ names_all
 allyears
 allyears.head()
 allyears.tail()
-## Data Wrangling - Indexing
-### Let's start analysing the data. Track the popularity of a name accross all year. While we do that, we will see how to set and sort indexes, how to select a row by the value of a MultiIndex, and how to make a stacked plot in matplotlib
+# Data Wrangling - Indexing
+# Let's start analysing the data. Track the popularity of a name accross all year. While we do that, we will see how to set and sort indexes, how to select a row by the value of a MultiIndex, and how to make a stacked plot in matplotlib
 allyears_indexed = allyears.set_index(['sex','name','year']).sort_index()
 allyears_indexed
 allyears_indexed.loc['F','Mary']
