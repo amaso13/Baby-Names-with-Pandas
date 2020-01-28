@@ -1,4 +1,4 @@
-##Let's start by loading a view basic Python packages: Numpy, matplotlib_pyplot, Pandas, and seaborn
+## Let's start by loading a view basic Python packages: Numpy, matplotlib_pyplot, Pandas, and seaborn
 import numpy as np
 import matplotlib.pyplot as pp
 import pandas as pd
@@ -21,7 +21,8 @@ names2011.head()
 ## Now let's specify the columns names by adding an argument, so that Sophia is not seen as a column
 names2011 = pd.read_csv('names/yob2011.txt',names=['name','sex','number'])
 names2011
-## Let's now collect all these tables in a names_all list. Then loop over years from 1880 to 2014, so to extend the range to 2014+1.
+## Data Wrangling - Collecting different tables
+### Let's now collect all these tables in a names_all list. Then loop over years from 1880 to 2014, so to extend the range to 2014+1.
 We'll append the list, the result of reading a comma-separated file.We need to assemble the name of each file which we'll do by replacing the number into this generic string. And again, we specify the names of the columns.
 
 names_all = []
@@ -35,7 +36,8 @@ names_all
 allyears
 allyears.head()
 allyears.tail()
-## Let's start analysing the data. Track the popularity of a name accross all year. While we do that, we will see how to set and sort indexes, how to select a row by the value of a MultiIndex, and how to make a stacked plot in matplotlib
+## Data Wrangling - Indexing
+### Let's start analysing the data. Track the popularity of a name accross all year. While we do that, we will see how to set and sort indexes, how to select a row by the value of a MultiIndex, and how to make a stacked plot in matplotlib
 allyears_indexed = allyears.set_index(['sex','name','year']).sort_index()
 allyears_indexed
 allyears_indexed.loc['F','Mary']
