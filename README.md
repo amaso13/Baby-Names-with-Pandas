@@ -9,6 +9,6 @@ We will learn the following:
 1. Installing packages and different libraries
 2. load, open a CSV file in Pandas-Python
 3. using indexing, append method
-4. using plot to providse som vizualistion
+4. using plot to providse some vizualistion
 5. providing a descriotive analysis of data
  
