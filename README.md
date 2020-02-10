@@ -6,7 +6,9 @@ This website describes the data as "Public: This dataset is intended for public 
 "All names are from Social Security card applications for births that occurred in the United States after 1879. Note that many people born before 1937 never applied for a Social Security card, so their names are not included in our data. For others who did apply, our records may not show the place of birth, and again their names are not included in our data."
 # What will we be learning on this project?
 We will learn the following:
-1. How to load the Social Security data (CSV format) about baby names
-2. How to plot the popularity of a given name across all years
-3. How to extract the 10 most popular boy or girl names by year
-4. How to define and identify name fads.
+1. Installing packages and different libraries
+2. load, open a CSV file in Pandas-Python
+3. using indexing
+4. using plot to providse som vizualistion
+5. providing a descriotive analysis of data
+ 
